@@ -25,6 +25,8 @@ It is not authoritative, and it is not vendor-supported. It is a community knowl
 - inferred = pattern-based guess from similar versions
 - unknown = left blank on purpose
 - placeholder = strings like UNKNOWN_*
+- # it's not 100% accurate it may never be, most is generated
+- # do not submit sensitive info
 
 ### This is a knowledge capture format, not a guarantee.
 
