@@ -1,0 +1,44 @@
+{
+  "id": "bentley.openraildesigner.23.00.00.129",
+  "name": "OpenRail Designer CONNECT Edition",
+  "version": "23.00.00.129",
+  "publisher": "Bentley",
+  "description": "OpenRail Designer CONNECT Edition 23.00.00.129 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup_OpenRailDesignerx64_23.00.00.129.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup_OpenRailDesignerx64_23.00.00.129.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "Setup_OpenRailDesignerx64_23.00.00.129.exe /uninstall /quiet"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "OpenRail Designer CONNECT Edition"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "OpenRail Designer CONNECT Edition 23.00.00.129",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Example path from C:\\ProgramData\\Package Cache\\{56623566-d946-47e1-b1dc-215fab096604}; confirm GUID and EXE name for your media.",
+    "Install command may require additional Bentley-specific parameters."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

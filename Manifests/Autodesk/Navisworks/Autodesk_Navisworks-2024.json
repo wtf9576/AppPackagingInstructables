@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.navisworks.2024",
+  "name": "Autodesk Navisworks",
+  "version": "2024",
+  "publisher": "Autodesk",
+  "description": "Autodesk Navisworks 2024 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup.exe",
+    "silentArgs": "-q",
+    "uninstallCmd": "\"%ProgramFiles%\\Autodesk\\AdODIS\\V1\\Installer.exe\" -i uninstall -q -m \"C:\\ProgramData\\Autodesk\\ODIS\\metadata\\{00C73B59-6FB8-32FF-B85F-F4CF5EBE4C3F}\\bundleManifest.xml\""
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Autodesk Navisworks 2024"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Autodesk Navisworks 2024",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Uses Autodesk ODIS bootstrap Setup.exe; ensure ODIS is present or included.",
+    "For more control, consider using Installer.exe deploy syntax instead."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

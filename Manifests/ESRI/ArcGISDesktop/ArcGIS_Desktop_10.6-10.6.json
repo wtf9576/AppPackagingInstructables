@@ -1,0 +1,44 @@
+{
+  "id": "esri.arcgisdesktop.10.6",
+  "name": "ArcGIS Desktop 10.6",
+  "version": "10.6",
+  "publisher": "ESRI",
+  "description": "ArcGIS Desktop 10.6 10.6 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/qb",
+    "uninstallCmd": "UNKNOWN_ARCGIS_DESKTOP_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "ArcGIS Desktop 10.6"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "ArcGIS Desktop 10.6 10.6",
+    "category": "GIS",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "License manager must support this version.",
+    "Python version bundled with ArcGIS may conflict with other installs."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

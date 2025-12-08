@@ -1,0 +1,44 @@
+{
+  "id": "esri.arcgisdesktop.10.8",
+  "name": "ArcGIS Desktop",
+  "version": "10.8",
+  "publisher": "ESRI",
+  "description": "ArcGIS Desktop 10.8 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "setup.exe",
+    "silentArgs": "/qn",
+    "uninstallCmd": "UNKNOWN_ARCGIS108_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "ArcGIS Desktop 10.8"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "ArcGIS Desktop 10.8",
+    "category": "GIS",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "ArcGIS Desktop 10.8 often installed via MSI; adjust installer type and command as needed.",
+    "C:\\Program Files (x86)\\ArcGIS\\Desktop10.8\\bin path may be useful for file-based detection."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

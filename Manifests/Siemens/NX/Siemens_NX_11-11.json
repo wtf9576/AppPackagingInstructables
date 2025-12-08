@@ -1,0 +1,44 @@
+{
+  "id": "siemens.nx.11",
+  "name": "Siemens NX 11",
+  "version": "11",
+  "publisher": "Siemens",
+  "description": "Siemens NX 11 11 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_NX_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Siemens NX 11"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Siemens NX 11 11",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Coordinate with PLM/Teamcenter team.",
+    "Check license server compatibility and environment variables."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

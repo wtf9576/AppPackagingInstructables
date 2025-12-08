@@ -1,0 +1,43 @@
+{
+  "id": "microsoft.projectpro.2013",
+  "name": "Microsoft Project Professional 2013",
+  "version": "2013",
+  "publisher": "Microsoft",
+  "description": "Microsoft Project Professional 2013 2013 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_PROJECTPRO_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Microsoft Project Professional 2013"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Microsoft Project Professional 2013 2013",
+    "category": "Productivity",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "License and activation channel must match Office base installation."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

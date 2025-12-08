@@ -1,0 +1,44 @@
+{
+  "id": "crowdstrike.falconsensor.7.x",
+  "name": "CrowdStrike Falcon Sensor 7.x",
+  "version": "7.x",
+  "publisher": "CrowdStrike",
+  "description": "CrowdStrike Falcon Sensor 7.x 7.x - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_CROWDSTRIKE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "CrowdStrike Falcon Sensor 7.x"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "CrowdStrike Falcon Sensor 7.x 7.x",
+    "category": "Security",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Sensor is usually installed via vendor-provided script; ensure customer ID is parameterized.",
+    "Uninstall often requires a maintenance token."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

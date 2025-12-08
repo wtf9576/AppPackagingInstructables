@@ -1,0 +1,43 @@
+{
+  "id": "microsoft.vcredist.2008",
+  "name": "Visual C++ Redistributable 2008",
+  "version": "2008",
+  "publisher": "Microsoft",
+  "description": "Visual C++ Redistributable 2008 2008 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_VC_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Visual C++ Redistributable 2008"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Visual C++ Redistributable 2008 2008",
+    "category": "Runtime",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Multiple VC++ versions can coexist; do not uninstall older ones blindly."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "autodesk.civil3d.2023",
+  "name": "Autodesk Civil 3D",
+  "version": "2023",
+  "publisher": "Autodesk",
+  "description": "Autodesk Civil 3D 2023 - inferred packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Img\\Setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Img\\Setup.exe",
+    "silentArgs": "/W /q /I Img\\Civil_3D_2023.ini /language en-us",
+    "uninstallCmd": "UNKNOWN_C3D2023_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Autodesk Civil 3D 2023"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Autodesk Civil 3D 2023",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "INI response file name inferred from year; confirm actual INI filename in your deployment media.",
+    "Uses legacy AutoCAD-based setup with INI response file.",
+    "Ensure Img folder structure is preserved in Intune source content."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

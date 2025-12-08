@@ -1,0 +1,44 @@
+{
+  "id": "sophos.sophosinterceptx.2022",
+  "name": "Sophos Intercept X",
+  "version": "2022",
+  "publisher": "Sophos",
+  "description": "Sophos Intercept X 2022 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_SOPHOS_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Sophos Intercept X"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Sophos Intercept X 2022",
+    "category": "Security",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Managed via Sophos Central; ensure device shows up in console.",
+    "Tamper protection may block uninstall; document access procedure."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

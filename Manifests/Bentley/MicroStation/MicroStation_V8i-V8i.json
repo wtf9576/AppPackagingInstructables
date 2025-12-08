@@ -1,0 +1,44 @@
+{
+  "id": "bentley.microstation.V8i",
+  "name": "MicroStation V8i",
+  "version": "V8i",
+  "publisher": "Bentley",
+  "description": "MicroStation V8i V8i - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_MICROSTATION_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "MicroStation V8i"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "MicroStation V8i V8i",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Workspace and workset locations must be preserved.",
+    "CAD standards may be version-dependent."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

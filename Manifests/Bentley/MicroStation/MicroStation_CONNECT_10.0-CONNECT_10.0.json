@@ -1,0 +1,44 @@
+{
+  "id": "bentley.microstation.CONNECT_10.0",
+  "name": "MicroStation CONNECT_10.0",
+  "version": "CONNECT_10.0",
+  "publisher": "Bentley",
+  "description": "MicroStation CONNECT_10.0 CONNECT_10.0 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_MICROSTATION_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "MicroStation CONNECT_10.0"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "MicroStation CONNECT_10.0 CONNECT_10.0",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Workspace and workset locations must be preserved.",
+    "CAD standards may be version-dependent."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

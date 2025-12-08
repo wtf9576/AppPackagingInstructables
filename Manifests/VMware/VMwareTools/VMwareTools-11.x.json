@@ -1,0 +1,44 @@
+{
+  "id": "vmware.vmwaretools.11.x",
+  "name": "VMware Tools 11.x",
+  "version": "11.x",
+  "publisher": "VMware",
+  "description": "VMware Tools 11.x 11.x - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_VMWARE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "VMware Tools 11.x"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "VMware Tools 11.x 11.x",
+    "category": "Virtualization",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Coordinate version with Horizon server and vSphere.",
+    "Installing Horizon Agent on non-VM endpoints is not supported."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

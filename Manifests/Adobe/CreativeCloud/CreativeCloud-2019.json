@@ -1,0 +1,44 @@
+{
+  "id": "adobe.creativecloud.2019",
+  "name": "Adobe Creative Cloud 2019",
+  "version": "2019",
+  "publisher": "Adobe",
+  "description": "Adobe Creative Cloud 2019 2019 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "--silent",
+    "uninstallCmd": "UNKNOWN_ADOBE_CC_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Adobe Creative Cloud 2019"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Adobe Creative Cloud 2019 2019",
+    "category": "Creative",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Adobe licensing and sign-in often required; test with offline/enterprise IDs.",
+    "May auto-update components; consider disabling auto-updates via admin console."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

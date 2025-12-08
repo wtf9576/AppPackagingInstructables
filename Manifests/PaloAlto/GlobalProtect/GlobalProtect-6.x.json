@@ -1,0 +1,43 @@
+{
+  "id": "paloalto.globalprotect.6.x",
+  "name": "GlobalProtect 6.x",
+  "version": "6.x",
+  "publisher": "PaloAlto",
+  "description": "GlobalProtect 6.x 6.x - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_GP_VPN_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "GlobalProtect 6.x"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "GlobalProtect 6.x 6.x",
+    "category": "VPN",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Portal configuration required; test pre-logon scenarios carefully."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

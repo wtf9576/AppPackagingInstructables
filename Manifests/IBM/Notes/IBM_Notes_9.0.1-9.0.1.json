@@ -1,0 +1,44 @@
+{
+  "id": "ibm.notes.9.0.1",
+  "name": "IBM Notes 9.0.1",
+  "version": "9.0.1",
+  "publisher": "IBM",
+  "description": "IBM Notes 9.0.1 9.0.1 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/s /v\"/qn\"",
+    "uninstallCmd": "UNKNOWN_NOTES_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "IBM Notes 9.0.1"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "IBM Notes 9.0.1 9.0.1",
+    "category": "Messaging",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Mailfile templates and Domino server versions must be compatible.",
+    "Profile migration may be required."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

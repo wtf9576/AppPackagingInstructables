@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.autocadarchitecture.2020",
+  "name": "AutoCAD Architecture",
+  "version": "2020",
+  "publisher": "Autodesk",
+  "description": "AutoCAD Architecture 2020 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup.exe",
+    "silentArgs": "/W /q /I AutoCAD_Arch_2020.ini /language en-us",
+    "uninstallCmd": "Uninstall-autocadArch20.bat"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "AutoCAD Architecture 2020"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "AutoCAD Architecture 2020",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "INI file must be present in same folder as Setup.exe.",
+    "Uninstall relies on custom batch script; ensure it is packaged alongside installer."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

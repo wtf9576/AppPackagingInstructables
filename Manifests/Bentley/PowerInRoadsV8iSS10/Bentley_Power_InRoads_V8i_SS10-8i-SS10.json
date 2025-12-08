@@ -1,0 +1,44 @@
+{
+  "id": "bentley.powerinroadsv8iss10.8i-SS10",
+  "name": "Bentley Power InRoads V8i SS10",
+  "version": "8i-SS10",
+  "publisher": "Bentley",
+  "description": "Bentley Power InRoads V8i SS10 8i-SS10 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "msiexec.exe"
+  },
+  "installer": {
+    "type": "msi",
+    "relativePath": "msiexec.exe",
+    "silentArgs": "/I{6AADD2ED-E230-47B9-928D-2AC9518B8A8C} /qn",
+    "uninstallCmd": "msiexec.exe /X{6AADD2ED-E230-47B9-928D-2AC9518B8A8C} /qn"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Bentley Power InRoads V8i (SELECTseries 10)"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Bentley Power InRoads V8i SS10 8i-SS10",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Product code from existing deployment; confirm GUID for your media.",
+    "MSI-based install; transform (MST) may be required for environment-specific settings."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

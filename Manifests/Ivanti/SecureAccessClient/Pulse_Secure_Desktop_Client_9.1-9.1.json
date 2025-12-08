@@ -1,0 +1,44 @@
+{
+  "id": "ivanti.secureaccessclient.9.1",
+  "name": "Pulse Secure Desktop Client 9.1",
+  "version": "9.1",
+  "publisher": "Ivanti",
+  "description": "Pulse Secure Desktop Client 9.1 9.1 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_PULSE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Pulse Secure Desktop Client 9.1"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Pulse Secure Desktop Client 9.1 9.1",
+    "category": "VPN",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "SSL VPN profiles may be deployed via separate mechanism.",
+    "Coexistence with other VPN clients may cause driver conflicts."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "microsoft.dotnetframework.4.7.2",
+  "name": ".NET Framework 4.7.2",
+  "version": "4.7.2",
+  "publisher": "Microsoft",
+  "description": ".NET Framework 4.7.2 4.7.2 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_DOTNET_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": ".NET Framework 4.7.2"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": ".NET Framework 4.7.2 4.7.2",
+    "category": "Runtime",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Usually deployed as OS feature or offline installer; reboots may be required.",
+    "Some legacy apps pin specifically to this version."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

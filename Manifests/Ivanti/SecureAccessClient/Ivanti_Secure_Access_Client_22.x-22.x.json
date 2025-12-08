@@ -1,0 +1,44 @@
+{
+  "id": "ivanti.secureaccessclient.22.x",
+  "name": "Ivanti Secure Access Client 22.x",
+  "version": "22.x",
+  "publisher": "Ivanti",
+  "description": "Ivanti Secure Access Client 22.x 22.x - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_PULSE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Ivanti Secure Access Client 22.x"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Ivanti Secure Access Client 22.x 22.x",
+    "category": "VPN",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "SSL VPN profiles may be deployed via separate mechanism.",
+    "Coexistence with other VPN clients may cause driver conflicts."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

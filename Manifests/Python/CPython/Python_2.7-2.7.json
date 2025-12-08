@@ -1,0 +1,44 @@
+{
+  "id": "python.cpython.2.7",
+  "name": "Python 2.7",
+  "version": "2.7",
+  "publisher": "Python",
+  "description": "Python 2.7 2.7 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet InstallAllUsers=1 PrependPath=1",
+    "uninstallCmd": "UNKNOWN_PYTHON_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Python 2.7"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Python 2.7 2.7",
+    "category": "Runtime",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Multiple Python versions may coexist; manage PATH and scripts carefully.",
+    "Pinned runtime for app compatibility; document which apps rely on which version."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

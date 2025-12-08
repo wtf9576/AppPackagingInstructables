@@ -1,0 +1,44 @@
+{
+  "id": "ansys.workbench.17.0",
+  "name": "ANSYS Workbench 17.0",
+  "version": "17.0",
+  "publisher": "ANSYS",
+  "description": "ANSYS Workbench 17.0 17.0 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_ANSYS_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "ANSYS Workbench 17.0"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "ANSYS Workbench 17.0 17.0",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Coordinate with license server admin for feature availability.",
+    "Simulation projects may be version-specific."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

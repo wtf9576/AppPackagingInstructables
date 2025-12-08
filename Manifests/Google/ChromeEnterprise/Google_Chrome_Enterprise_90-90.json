@@ -1,0 +1,44 @@
+{
+  "id": "google.chromeenterprise.90",
+  "name": "Google Chrome Enterprise 90",
+  "version": "90",
+  "publisher": "Google",
+  "description": "Google Chrome Enterprise 90 90 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/silent /install",
+    "uninstallCmd": "UNKNOWN_CHROME_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Google Chrome Enterprise 90"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Google Chrome Enterprise 90 90",
+    "category": "Browser",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Use ADMX/Intune policies to lock version and disable auto-update.",
+    "Pinned browsers often required for legacy web apps; coordinate with app owners."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

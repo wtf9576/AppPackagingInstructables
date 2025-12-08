@@ -1,0 +1,45 @@
+{
+  "id": "autodesk.autocadarchitecture.2021",
+  "name": "AutoCAD Architecture",
+  "version": "2021",
+  "publisher": "Autodesk",
+  "description": "AutoCAD Architecture 2021 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup.exe",
+    "silentArgs": "/W /q /I AutoCAD_Arch_2021.ini /language en-us",
+    "uninstallCmd": "Uninstall-autocadArch20.bat"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "AutoCAD Architecture 2021"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "AutoCAD Architecture 2021",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "INI file must be present in same folder as Setup.exe.",
+    "Uninstall script name reused; confirm it supports 2021 logic.",
+    "C:\\ProgramData\\Autodesk\\ACA 2021\\enu\\ may be useful for detection if needed."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "bentley.microstation.10.17.02.061",
+  "name": "MicroStation CONNECT Edition",
+  "version": "10.17.02.061",
+  "publisher": "Bentley",
+  "description": "MicroStation CONNECT Edition 10.17.02.061 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup_MicroStationx64_10.17.02.061.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup_MicroStationx64_10.17.02.061.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "Setup_MicroStationx64_10.17.02.061.exe /uninstall /quiet"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "MicroStation CONNECT Edition"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "MicroStation CONNECT Edition 10.17.02.061",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Example Package Cache paths: C:\\ProgramData\\Package Cache\\{dacef8e6-9f6b-47f1-a3a6-bf818985823c} and {AD968457-C5D8-3BD4-93A3-0DC3664C9C4F}v10.17.02.061.",
+    "Confirm EXE name and silent switch syntax with Bentley documentation."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

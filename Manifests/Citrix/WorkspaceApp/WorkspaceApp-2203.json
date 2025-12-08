@@ -1,0 +1,44 @@
+{
+  "id": "citrix.workspaceapp.2203",
+  "name": "Citrix Workspace App 2203 LTSR",
+  "version": "2203",
+  "publisher": "Citrix",
+  "description": "Citrix Workspace App 2203 LTSR 2203 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_CITRIX_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Citrix Workspace App 2203 LTSR"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Citrix Workspace App 2203 LTSR 2203",
+    "category": "RemoteAccess",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Legacy Receiver and Workspace app should not coexist.",
+    "Match version to Citrix Virtual Apps and Desktops farm recommendations."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

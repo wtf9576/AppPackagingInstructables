@@ -1,0 +1,44 @@
+{
+  "id": "sap.sapgui.7.50",
+  "name": "SAP GUI 7.50",
+  "version": "7.50",
+  "publisher": "SAP",
+  "description": "SAP GUI 7.50 7.50 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/silent",
+    "uninstallCmd": "UNKNOWN_SAPGUI_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "SAP GUI 7.50"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "SAP GUI 7.50 7.50",
+    "category": "ERP",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Coordinate with SAP Basis team for correct patch level.",
+    "SAP GUI version must match backend kernel recommendations."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

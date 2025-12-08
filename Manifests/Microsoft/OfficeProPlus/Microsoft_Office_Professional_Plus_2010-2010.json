@@ -1,0 +1,44 @@
+{
+  "id": "microsoft.officeproplus.2010",
+  "name": "Microsoft Office Professional Plus 2010",
+  "version": "2010",
+  "publisher": "Microsoft",
+  "description": "Microsoft Office Professional Plus 2010 2010 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_OFFICE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Microsoft Office Professional Plus 2010"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Microsoft Office Professional Plus 2010 2010",
+    "category": "Productivity",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Typically deployed via MSI or Click-to-Run; ensure correct channel.",
+    "License activation (KMS/MAK) must be handled separately."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

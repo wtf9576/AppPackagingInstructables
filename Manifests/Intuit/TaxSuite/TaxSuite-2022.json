@@ -1,0 +1,44 @@
+{
+  "id": "intuit.taxsuite.2022",
+  "name": "Intuit Tax Suite 2022",
+  "version": "2022",
+  "publisher": "Intuit",
+  "description": "Intuit Tax Suite 2022 2022 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/S",
+    "uninstallCmd": "UNKNOWN_INTUIT_TAX_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Intuit Tax Suite 2022"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Intuit Tax Suite 2022 2022",
+    "category": "Finance",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Tax year-specific; do not auto-upgrade previous-year installs.",
+    "Confirm licensing server / activation method."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.autocadarchitecture.2024",
+  "name": "AutoCAD Architecture",
+  "version": "2024",
+  "publisher": "Autodesk",
+  "description": "AutoCAD Architecture 2024 - inferred packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup.exe",
+    "silentArgs": "/W /q /I .\\AutoCAD_Arch_2024.ini /language en-us",
+    "uninstallCmd": "Uninstall-autocadArch20.bat"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "AutoCAD Architecture 2024"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "AutoCAD Architecture 2024",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "INI response file name inferred from year; confirm actual INI filename in your media.",
+    "Uninstall batch script name reused from 2020; confirm it supports this version or duplicate/rename it."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

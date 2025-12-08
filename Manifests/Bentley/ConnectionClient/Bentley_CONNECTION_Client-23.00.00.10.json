@@ -1,0 +1,44 @@
+{
+  "id": "bentley.connectionclient.23.00.00.10",
+  "name": "Bentley CONNECTION Client",
+  "version": "23.00.00.10",
+  "publisher": "Bentley",
+  "description": "Bentley CONNECTION Client 23.00.00.10 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Setup_CONNECTIONClientx64_23.00.00.10.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Setup_CONNECTIONClientx64_23.00.00.10.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "Setup_CONNECTIONClientx64_23.00.00.10.exe /uninstall /quiet"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Bentley CONNECTION Client"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Bentley CONNECTION Client 23.00.00.10",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Installer typically resides in C:\\ProgramData\\Package Cache\\150543BE2D9F15F1AD54073EE74BC31664D945D0.",
+    "Package Cache GUID may vary between environments; confirm path."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

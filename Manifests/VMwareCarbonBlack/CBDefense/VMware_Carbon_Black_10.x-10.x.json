@@ -1,0 +1,44 @@
+{
+  "id": "vmwarecarbonblack.cbdefense.10.x",
+  "name": "VMware Carbon Black 10.x",
+  "version": "10.x",
+  "publisher": "VMwareCarbonBlack",
+  "description": "VMware Carbon Black 10.x 10.x - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_CB_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "VMware Carbon Black 10.x"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "VMware Carbon Black 10.x 10.x",
+    "category": "Security",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Policies may block software installs until sensor is registered.",
+    "Coexistence with other EDR tools not supported."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "autodesk.navisworks.2020",
+  "name": "Autodesk Navisworks",
+  "version": "2020",
+  "publisher": "Autodesk",
+  "description": "Autodesk Navisworks 2020 - inferred packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Installer.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Installer.exe",
+    "silentArgs": "-i deploy --offline_mode --ui_mode basic -o .\\Collection.xml --installer_version \"1.31.0.546\"",
+    "uninstallCmd": "UNKNOWN_ODIS_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Autodesk Navisworks 2020"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Autodesk Navisworks 2020",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "ODIS-based deployment using Collection.xml.",
+    "Ensure Collection.xml and payload folders are present at root of package.",
+    "installer_version may need to match ODIS version in environment.",
+    "Assumes ODIS-based deployment similar to 2022\u20132024 media.",
+    "Adjust offline_mode/ui_mode and installer_version if vendor media differs.",
+    "UninstallCmd placeholder; update with ODIS manifest path when available."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

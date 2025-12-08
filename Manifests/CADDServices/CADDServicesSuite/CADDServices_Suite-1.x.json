@@ -1,0 +1,44 @@
+{
+  "id": "caddservices.caddservicessuite.1.x",
+  "name": "CADDServices Suite",
+  "version": "1.x",
+  "publisher": "CADDServices",
+  "description": "CADDServices Suite 1.x - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Deploy-Application.ps1"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Deploy-Application.ps1",
+    "silentArgs": "-ExecutionPolicy Bypass -File .\\Deploy-Application.ps1 -DeploymentType \"Install\" -DeployMode \"Silent\"",
+    "uninstallCmd": "PowerShell.exe -ExecutionPolicy Bypass -File .\\Deploy-Application.ps1 -DeploymentType \"Uninstall\" -DeployMode \"Silent\""
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "CADDServices"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "CADDServices Suite 1.x",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Uses PSAppDeployToolkit; adjust Deploy-Application.ps1 as needed for each target app.",
+    "C:\\Users\\Public\\CADDServices\\CADDServicesRun.exe may be useful for detection."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

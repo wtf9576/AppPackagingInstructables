@@ -1,0 +1,44 @@
+{
+  "id": "esri.arcgispro.2.4",
+  "name": "ArcGIS Pro 2.4",
+  "version": "2.4",
+  "publisher": "ESRI",
+  "description": "ArcGIS Pro 2.4 2.4 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet",
+    "uninstallCmd": "UNKNOWN_ARCGIS_PRO_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "ArcGIS Pro 2.4"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "ArcGIS Pro 2.4 2.4",
+    "category": "GIS",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Portal/AGOL and license type must be validated against this version.",
+    "Projects may not be backward compatible with older Pro versions."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

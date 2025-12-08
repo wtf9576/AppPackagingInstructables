@@ -1,0 +1,44 @@
+{
+  "id": "intuit.quickbooksdesktop.2020",
+  "name": "QuickBooks Desktop 2020",
+  "version": "2020",
+  "publisher": "Intuit",
+  "description": "QuickBooks Desktop 2020 2020 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/S",
+    "uninstallCmd": "UNKNOWN_QB_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "QuickBooks Desktop 2020"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "QuickBooks Desktop 2020 2020",
+    "category": "Finance",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Back up company files before version changes.",
+    "Check compatibility with QuickBooks Database Server Manager."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

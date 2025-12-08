@@ -1,0 +1,44 @@
+{
+  "id": "mcafee.endpointsecurity.10.7",
+  "name": "McAfee Endpoint Security 10.7",
+  "version": "10.7",
+  "publisher": "McAfee",
+  "description": "McAfee Endpoint Security 10.7 10.7 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_MCAFEE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "McAfee Endpoint Security 10.7"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "McAfee Endpoint Security 10.7 10.7",
+    "category": "Security",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Uninstall may require ePO-managed removal task.",
+    "Ensure no leftover legacy VirusScan components."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.infraworks.2022",
+  "name": "Autodesk InfraWorks",
+  "version": "2022",
+  "publisher": "Autodesk",
+  "description": "Autodesk InfraWorks 2022 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Installer.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Installer.exe",
+    "silentArgs": "-i deploy --offline_mode -q -o .\\Collection.xml --installer_version \"1.31.0.546\"",
+    "uninstallCmd": "Installer.exe -i uninstall -q --manifest .\\setup.xml --extension_manifest .\\IW360P_2022_en-US\\setup_ext.xml"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Autodesk InfraWorks 2022"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Autodesk InfraWorks 2022",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "IW360P_2022_en-US folder and setup XML files must be present at package root.",
+    "Offline deploy assumed; confirm installer_version value for your media."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

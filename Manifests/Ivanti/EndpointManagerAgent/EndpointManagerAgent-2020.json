@@ -1,0 +1,44 @@
+{
+  "id": "ivanti.endpointmanageragent.2020",
+  "name": "Ivanti Endpoint Manager Agent 2020",
+  "version": "2020",
+  "publisher": "Ivanti",
+  "description": "Ivanti Endpoint Manager Agent 2020 2020 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/quiet /norestart",
+    "uninstallCmd": "UNKNOWN_IVANTI_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Ivanti Endpoint Manager Agent 2020"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Ivanti Endpoint Manager Agent 2020 2020",
+    "category": "Management",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Ensure correct core server / gateway address is configured.",
+    "Co-management with other endpoint tools may require tuning."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

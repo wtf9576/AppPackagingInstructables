@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.autocadmap3d.2024",
+  "name": "AutoCAD Map 3D",
+  "version": "2024",
+  "publisher": "Autodesk",
+  "description": "AutoCAD Map 3D 2024 - inferred packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Installer.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Installer.exe",
+    "silentArgs": "-i deploy --offline_mode --ui_mode basic -o .\\Collection.xml --installer_version \"1.31.0.546\"",
+    "uninstallCmd": "Installer.exe -i uninstall -q --manifest .\\MAP_2024_en-US\\setup.xml --extension_manifest .\\MAP_2024_en-US\\setup_ext.xml"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "AutoCAD Map 3D 2024"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "AutoCAD Map 3D 2024",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "MAP_YYYY_en-US folder naming pattern inferred; replace YYYY with actual folder name if different.",
+    "Adjust installer_version if media targets a different ODIS version."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

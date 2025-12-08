@@ -1,0 +1,44 @@
+{
+  "id": "microsoft.edgeenterprise.100",
+  "name": "Microsoft Edge Enterprise 100",
+  "version": "100",
+  "publisher": "Microsoft",
+  "description": "Microsoft Edge Enterprise 100 100 - enterprise packaging template.",
+  "source": {
+    "type": "local",
+    "relativePath": "payload\\\\setup.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "payload\\\\setup.exe",
+    "silentArgs": "/silent /install",
+    "uninstallCmd": "UNKNOWN_EDGE_UNINSTALL"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Microsoft Edge Enterprise 100"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Microsoft Edge Enterprise 100 100",
+    "category": "Browser",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "Use policies to control IE mode and auto-update behavior.",
+    "Ensure WebView2 runtime strategy is defined separately."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}

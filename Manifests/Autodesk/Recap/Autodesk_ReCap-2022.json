@@ -1,0 +1,44 @@
+{
+  "id": "autodesk.recap.2022",
+  "name": "Autodesk ReCap",
+  "version": "2022",
+  "publisher": "Autodesk",
+  "description": "Autodesk ReCap 2022 - packaging instructable template.",
+  "source": {
+    "type": "local",
+    "relativePath": "Installer.exe"
+  },
+  "installer": {
+    "type": "exe",
+    "relativePath": "Installer.exe",
+    "silentArgs": "-i deploy --offline_mode -q -o .\\Collection.xml --installer_version \"1.31.0.546\"",
+    "uninstallCmd": "Installer.exe -i uninstall -q --manifest .\\RECAP_2022_en-US\\setup.xml --extension_manifest .\\RECAP_2022_en-US\\setup_ext.xml"
+  },
+  "detection": {
+    "type": "uninstallReg",
+    "keyPath": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+    "valueName": "DisplayName",
+    "operator": "contains",
+    "expectedValue": "Autodesk ReCap 2022"
+  },
+  "requirements": {
+    "minOSVersion": "10.0.14393",
+    "architecture": "x64"
+  },
+  "intuneHints": {
+    "displayName": "Autodesk ReCap 2022",
+    "category": "Engineering",
+    "restartBehavior": "suppress",
+    "notifications": "showAll"
+  },
+  "variables": {},
+  "caveats": [
+    "RECAP_2022_en-US folder and setup XML files must be present at package root.",
+    "Uses ODIS-style deployment and local manifest-based uninstall."
+  ],
+  "review": {
+    "reviewed": false,
+    "reviewedBy": null,
+    "reviewedDate": null
+  }
+}
